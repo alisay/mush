@@ -15,7 +15,7 @@ class MushroomsTest < ApplicationSystemTestCase
     click_on "New Mushroom"
 
     fill_in "Seller", with: @mushroom.seller_id
-    fill_in "Type", with: @mushroom.type
+    fill_in "Flavour", with: @mushroom.flavour
     click_on "Create Mushroom"
 
     assert_text "Mushroom was successfully created"
@@ -27,7 +27,7 @@ class MushroomsTest < ApplicationSystemTestCase
     click_on "Edit", match: :first
 
     fill_in "Seller", with: @mushroom.seller_id
-    fill_in "Type", with: @mushroom.type
+    fill_in "Flavour", with: @mushroom.flavour
     click_on "Update Mushroom"
 
     assert_text "Mushroom was successfully updated"

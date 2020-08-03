@@ -17,7 +17,7 @@ class MushroomsControllerTest < ActionDispatch::IntegrationTest
 
   test "should create mushroom" do
     assert_difference('Mushroom.count') do
-      post mushrooms_url, params: { mushroom: { seller_id: @mushroom.seller_id, type: @mushroom.type } }
+      post mushrooms_url, params: { mushroom: { seller_id: @mushroom.seller_id, flavour: @mushroom.flavour } }
     end
 
     assert_redirected_to mushroom_url(Mushroom.last)
@@ -34,7 +34,7 @@ class MushroomsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should update mushroom" do
-    patch mushroom_url(@mushroom), params: { mushroom: { seller_id: @mushroom.seller_id, type: @mushroom.type } }
+    patch mushroom_url(@mushroom), params: { mushroom: { seller_id: @mushroom.seller_id, flavour: @mushroom.flavour } }
     assert_redirected_to mushroom_url(@mushroom)
   end
 

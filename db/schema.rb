@@ -16,7 +16,7 @@ ActiveRecord::Schema.define(version: 2020_08_03_015216) do
   enable_extension "plpgsql"
 
   create_table "mushrooms", force: :cascade do |t|
-    t.string "type"
+    t.string "flavour"
     t.bigint "seller_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false

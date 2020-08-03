@@ -14,7 +14,7 @@
   <tbody>
     <% @mushrooms.each do |mushroom| %>
       <tr>
-        <td><%= mushroom.type %></td>
+        <td><%= mushroom.flavour %></td>
         <td><%= mushroom.seller_id %></td>
         <td><%= link_to 'Show', mushroom %></td>
         <td><%= link_to 'Edit', edit_mushroom_path(mushroom) %></td>

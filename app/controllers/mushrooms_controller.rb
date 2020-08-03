@@ -35,7 +35,11 @@ class MushroomsController < ApplicationController
   # POST /mushrooms.json
   def create
     @mushroom = Mushroom.new(mushroom_params)
-
+    @seller = Seller.new
+    @seller.profile_id = current_user.profile.id
+    @seller.save
+    @mushroom.seller_id = current_user.profile.seller.id
+    
     respond_to do |format|
       if @mushroom.save
         format.html { redirect_to @mushroom, notice: 'Mushroom was successfully created.' }
@@ -79,6 +83,6 @@ class MushroomsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def mushroom_params
-      params.require(:mushroom).permit(:type, :seller_id)
+      params.require(:mushroom).permit(:flavour, :seller_id)
     end
 end
