@@ -10,5 +10,7 @@
   <%= @mushroom.seller_id %>
 </p>
 
-<%= link_to 'Edit', edit_mushroom_path(@mushroom) %> |
+<% if(current_user && current_user.profile && (current_user.profile.id == @mushroom.seller.profile_id)) %>
+    <%= link_to 'Edit', edit_mushroom_path(@mushroom) %> |
+<% end %>
 <%= link_to 'Back', mushrooms_path %>
