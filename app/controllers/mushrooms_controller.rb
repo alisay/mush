@@ -54,6 +54,9 @@ class MushroomsController < ApplicationController
   # PATCH/PUT /mushrooms/1
   # PATCH/PUT /mushrooms/1.json
   def update
+    if @mushroom.pictures
+      @mushroom.pictures.purge
+    end
     respond_to do |format|
       if @mushroom.update(mushroom_params)
         format.html { redirect_to @mushroom, notice: 'Mushroom was successfully updated.' }
@@ -83,6 +86,6 @@ class MushroomsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def mushroom_params
-      params.require(:mushroom).permit(:flavour, :seller_id)
+      params.require(:mushroom).permit(:flavour, :seller_id, pictures: [])
     end
 end

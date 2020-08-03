@@ -16,6 +16,11 @@
     <%= form.text_field :flavour %>
   </div>
 
+  <div class="field">
+    <%= form.label :pictures %>
+    <%= form.file_field :pictures, multiple: true %>
+  </div>
+
   <div class="actions">
     <%= form.submit %>
   </div>

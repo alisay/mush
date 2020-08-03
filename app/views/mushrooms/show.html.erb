@@ -1,5 +1,17 @@
 <p id="notice"><%= notice %></p>
 
+<div class="row">
+<div class="col-md-8">
+<div class="row">
+<% @mushroom.pictures.each do |picture|%>
+<div class="col-md-6">
+<%= image_tag picture, class: "d-block w-100"%>
+</div>
+<% end %>
+</div>
+</div>
+
+<div class="col-md-4">
 <p>
   <strong>Flavour:</strong>
   <%= @mushroom.flavour %>
@@ -9,6 +21,8 @@
   <strong>Seller:</strong>
   <%= @mushroom.seller_id %>
 </p>
+</div>
+
 
 <% if(current_user && current_user.profile && (current_user.profile.id == @mushroom.seller.profile_id)) %>
     <%= link_to 'Edit', edit_mushroom_path(@mushroom) %> |
