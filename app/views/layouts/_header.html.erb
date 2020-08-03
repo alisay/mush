@@ -1,0 +1,30 @@
+<nav class="navbar navbar-inverse"
+<div class="container-fluid">
+  <div class="navbar-header">
+    <a class="navbar-brand" href="#">FunGuy</a>
+  </div>
+  <ul class = "nav navbar-nav">
+    <li class="active"><a href="#">Home</a></li>
+    <li><a href="#">Page 1</a></li>
+  </ul>
+  <ul>
+    <%= form_tag(search_page_path, :method => "get",   
+    class: 'navbar-form navbar-left') do %>  
+    <div class="input-group">  
+    <%= search_field_tag :search, params[:search], placeholder: "Search", class: "form-control" %>  
+    <div class="input-group-btn">  
+        <%= button_tag "", :class => 'btn btn-info glyphicon glyphicon-search',:name => nil%>  
+    </div>  
+    </div>  
+    <% end %>
+  </ul>
+  <ul class="nav navbar-nav navbar-right">
+  <li class="nav-item active">
+  <%= link_to 'Sell My Mush', new_mushroom_path, class: "nav- btn btn-primary" %>
+</li>
+    <li><a href="#"><span class="glyphicon glyphicon-user"></span>Sign Up</a></li>
+    <li><a href="#"><span class="glyphicon glyphicon-log-in"></span>Login</a></li>
+  </ul>
+</div>
+</nav>
+
