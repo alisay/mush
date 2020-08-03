@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Mushrooms</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Type</th>
+      <th>Seller</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @mushrooms.each do |mushroom| %>
+      <tr>
+        <td><%= mushroom.type %></td>
+        <td><%= mushroom.seller_id %></td>
+        <td><%= link_to 'Show', mushroom %></td>
+        <td><%= link_to 'Edit', edit_mushroom_path(mushroom) %></td>
+        <td><%= link_to 'Destroy', mushroom, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Mushroom', new_mushroom_path %>

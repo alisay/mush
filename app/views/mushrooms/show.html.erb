@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Type:</strong>
+  <%= @mushroom.type %>
+</p>
+
+<p>
+  <strong>Seller:</strong>
+  <%= @mushroom.seller_id %>
+</p>
+
+<%= link_to 'Edit', edit_mushroom_path(@mushroom) %> |
+<%= link_to 'Back', mushrooms_path %>

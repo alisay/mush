@@ -1,0 +1,27 @@
+<%= form_with(model: mushroom, local: true) do |form| %>
+  <% if mushroom.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(mushroom.errors.count, "error") %> prohibited this mushroom from being saved:</h2>
+
+      <ul>
+        <% mushroom.errors.full_messages.each do |message| %>
+          <li><%= message %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :type %>
+    <%= form.text_field :type %>
+  </div>
+
+  <div class="field">
+    <%= form.label :seller_id %>
+    <%= form.text_field :seller_id %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
