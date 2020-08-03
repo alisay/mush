@@ -1,4 +1,3 @@
-class MushroomsController < ApplicationController
   before_action :set_mushroom, only: [:show, :edit, :update, :destroy]
 
   # GET /mushrooms

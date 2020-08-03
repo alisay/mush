@@ -1,2 +1,6 @@
-def search  
+class PagesController < ApplicationController
+
+    def search  
+    end
+
 end
