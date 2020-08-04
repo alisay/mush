@@ -23,6 +23,23 @@
 </p>
 </div>
 
+<<button data-stripe="payment">Buy<%= number_to_currency(5000) %></button>
+
+<script src="https://js.stripe.com/v3/"></script>
+
+<script>
+  document
+    .querySelector("[data-stripe='payment']")
+    .addEventListener("click", () => {
+      const stripe = Stripe(
+        "<%= Rails.application.credentials.dig(:stripe, :public_key) %>"
+      );
+
+      stripe.redirectToCheckout({
+        sessionId: "<%= @session_id %>"
+      });
+    });
+</script>
 
 <% if(current_user && current_user.profile && (current_user.profile.id == @mushroom.seller.profile_id)) %>
     <%= link_to 'Edit', edit_mushroom_path(@mushroom) %> |
