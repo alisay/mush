@@ -27,10 +27,10 @@
 <% if(current_user && current_user.profile && (current_user.profile.id == @mushroom.seller.profile_id)) %>
     <%= link_to 'Edit', edit_mushroom_path(@mushroom) %> |
 <% end %>
-<%= link_to 'Mark as sold', mushroom_path(@mushroom, mushroom: {purchased: true} ), method: :put %>
-<%= link_to 'Back', mushrooms_path %>
+<p><%= link_to 'Mark as sold', mushroom_path(@mushroom, mushroom: {purchased: true} ), method: :put %></p> 
+<p><%= link_to 'Back', mushrooms_path %></p>
 
-<<button data-stripe="payment">Leave a tip<%= number_to_currency(5) %></button>
+<p><button data-stripe="payment">Leave a tip<%= number_to_currency(5) %></button></p>
 
 <script src="https://js.stripe.com/v3/"></script>
 
