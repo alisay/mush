@@ -10,6 +10,27 @@ class MushroomsController < ApplicationController
   # GET /mushrooms/1
   # GET /mushrooms/1.json
   def show
+    session = Stripe::Checkout::Session.create(
+        payment_method_types: ['card'],
+        customer_email: current_user.email,
+        line_items: [{
+            name: @mushroom.flavour,
+            # amount: @mushroom.price * 100,
+            amount: 5000,
+            currency: 'aud',
+            quantity: 1,
+        }],
+        payment_intent_data: {
+            metadata: {
+                user_id: current_user.id,
+                listing_id: @mushroom.id
+            }
+        },
+        success_url: "#{root_url}payments/success?userId=#{current_user.id}&listingId=#{@mushroom.id}",
+        cancel_url: "#{root_url}listings"
+    )
+
+    @session_id = session.id
   end
 
   # GET /mushrooms/new
