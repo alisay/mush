@@ -41,7 +41,7 @@
     .querySelector("[data-stripe='payment']")
     .addEventListener("click", () => {
       const stripe = Stripe(
-        "<%= Rails.application.credentials.dig(:stripe, :public_key) %>"
+        "<%= ENV['STRIPE_SECRET_KEY'] %>"
       );
 
       stripe.redirectToCheckout({
