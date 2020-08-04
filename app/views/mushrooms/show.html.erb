@@ -41,7 +41,7 @@
     .querySelector("[data-stripe='payment']")
     .addEventListener("click", () => {
       const stripe = Stripe(
-        "<%= ENV['STRIPE_SECRET_KEY'] %>"
+        "<%= ENV['STRIPE_PUBLIC_KEY'] %>"
       );
 
       stripe.redirectToCheckout({
