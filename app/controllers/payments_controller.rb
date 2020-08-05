@@ -12,7 +12,7 @@ class PaymentsController < ApplicationController
         p "mushroom id " + mushroom_id
         p "user id " + user_id
     
-        status 200
+        head :ok
     end
     
 end
