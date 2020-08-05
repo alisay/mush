@@ -90,15 +90,17 @@ User stories are well thought out, relevant, and comprehensively cover the needs
 * As someone who know what kind of mushroom I am seeking, I want to be able to search listings on the app according to that mushroom name, so that I may see a list of matching listings and click through to view those listings.
 * As someone who does not have a strong preference or idea about what mushroom I am seeking, I want to view the full list of available mushroom locations, in order to be fully informed about my options. 
 * As someone who has found a mushroom location where I wish to collect mushrooms, I want to reserve the right to collect mushrooms in that location, so that I can minimize the chance that other foragers will be present at the site concomitant to me. 
-
-
-* find locations near me
-* view my reservations
-* 
+* Being physically located in space and cannot easily travel, I want to see mushroom locations that are near to my present location, so that I can best use my time to travel to that location. 
+* Having indicated that I wish to forage for mushrooms in a particular location at a particular time, I would like to view a list of those bookings, so that I may attend those in my own time, or delete them if I no longer wish to attend.
 
 ## R13	Wireframes for your app
 
 More than five detailed and well designed wireframes provided, for several different screen sizes (as required for the app) 6 points
+
+| | Mobile | Web/Tablet |
+|:---:|:---:|:---:|
+|Home Page| <img src="resources/wireframes/wireframe_home_mobile.png" />|<img src="resources/wireframes/wireframe_home_web.png" />|
+
 
 ## R14	An ERD for your app
 
