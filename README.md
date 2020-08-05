@@ -103,6 +103,9 @@ More than five detailed and well designed wireframes provided, for several diffe
 
 
 ## R14	An ERD for your app
+
+### Planned ERD: 
+
 <img src="resources/erd.png" />
 
 ERD provided represents a normalised database model
