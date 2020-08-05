@@ -99,7 +99,7 @@ More than five detailed and well designed wireframes provided, for several diffe
 
 | | Mobile | Web/Tablet |
 |:---:|:---:|:---:|
-|Home Page| <img src="resources/wireframes/wireframe_home_mobile.png" />|<img src="resources/wireframes/wireframe_home_web.png" />|
+|Home Page| <img src="resources/wireframe_home_mobile.png" />|<img src="resources/wireframes/wireframe_home_web.png" />|
 
 
 ## R14	An ERD for your app
