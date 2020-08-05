@@ -36,10 +36,9 @@ class MushroomsController < ApplicationController
   # GET /mushrooms/new
   def new
     if user_signed_in?
-      # if the user has created a profile show the cars form else redirect to creating a profile page
+      # if the user has created a profile show the mushroom form else redirect to creating a profile page
       if current_user.profile
           @mushroom = Mushroom.new
-          # render cars form page
       else
           redirect_to new_profile_path
       end
