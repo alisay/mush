@@ -72,11 +72,9 @@ Environmentally and socially conscious mycologists living in cool, moist environ
 * Database: Postgresql.
 * Deployment platform: Heroku.
 * Utilities: Stripe, Devise, AWS S3, Google Maps
-* DevOps: Git, Github, VS Code, Bundler, Figma.
+* DevOps: Git, Github, VS Code, Bundler, Lucidchart.
 
 ## R12	User stories for your app
-
-User stories are well thought out, relevant, and comprehensively cover the needs of the app 6 points
 
 * As a person interested in mushroom locating apps, I want to create an account using my email address and a chosen password, so that I can access the app.
 * As a registered user, I want to be able to define my name on the app, so that I may appear unique.
@@ -100,11 +98,12 @@ More than five detailed and well designed wireframes provided, for several diffe
 | | Mobile | Web/Tablet |
 |:---:|:---:|:---:|
 |Home Page| <img src="resources/wireframe_home_mobile.png" />|<img src="resources/wireframe_home_web.png" />|
-|Menu | <img src="resources/wireframe_menu_mobile.png" />||
 |Browse Mushrooms|<img src="resources/wireframe_browse_mobile.png" />|<img src="resources/wireframe_browse_web.png" />|
+|Menu | <img src="resources/wireframe_menu_mobile.png" />||
 
 
 ## R14	An ERD for your app
+<img src="resources/erd.png" />
 
 ERD provided represents a normalised database model
 Meets D with no duplication and ideal definition of entities.
