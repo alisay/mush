@@ -1,6 +1,7 @@
 class MushroomsController < ApplicationController
   before_action :set_mushroom, only: [:show, :edit, :update, :destroy]
-
+  before_action :authenticate_user!
+  
   # GET /mushrooms
   # GET /mushrooms.json
   def index
