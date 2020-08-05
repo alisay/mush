@@ -99,7 +99,9 @@ More than five detailed and well designed wireframes provided, for several diffe
 
 | | Mobile | Web/Tablet |
 |:---:|:---:|:---:|
-|Home Page| <img src="resources/wireframe_home_mobile.png" />|<img src="resources/wireframes/wireframe_home_web.png" />|
+|Home Page| <img src="resources/wireframe_home_mobile.png" />|<img src="resources/wireframe_home_web.png" />|
+|Menu | <img src="resources/wireframe_menu_mobile.png" />||
+|Browse Mushrooms|<img src="resources/wireframe_browse_mobile.png" />|<img src="resources/wireframe_browse_web.png" />|
 
 
 ## R14	An ERD for your app
