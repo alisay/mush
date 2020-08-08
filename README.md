@@ -1,65 +1,38 @@
 # README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
-
-Things you may want to cover:
-
-* Ruby version
-
-* System dependencies
-
-* Configuration
-
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
-
-
 ## R7	Identification of the problem you are trying to solve by building this particular marketplace app.
 
-Demonstrates a full understanding of the problems that exist in a relevant marketplace that needs disrupting 6points
+**Demonstrates a full understanding of the problems that exist in a relevant marketplace that needs disrupting 6points**
 
-Mushroom foraging is booming in popularity amongst the upwardly-mobile middle classes seeking a relaxing, nourishing and wholesome activity in nature. Mushrooms are difficult to cultivate and propagate unpredictably. However, once they have established themselves in a particular location, they will reliably return soon after picking (so long as sufficient care is taken to minimise destruction to the undergrowth). This means that people who forage mushrooms usually keep a record of good mushrooms locations they have found, and often share these with other foragers. Unfortunately, this information economy suffers from a lack of connectedness – mushroom foragers being notably reclusive and poor communicators. This app exists to solve this problem. It allows mushroom foragers to list and search for locations where mushrooms can be found. Users can then indicate their intention to pick mushrooms in this location, at a certain time, thus ensuring that no other foragers will interrupt their solitary enterprise. They also have an option to leave a tip, to show their appreciation (or a comment to provide further information on their foraging experience). Several imbricated problems are solved: hunger, disinclination to see or speak to other humans, and the desire for the pleasures of a good 'shroom haul.  
+Mushroom foraging is booming in popularity amongst the upwardly-mobile middle classes seeking a relaxing, nourishing and wholesome activity in nature. Mushrooms are difficult to cultivate and propagate unpredictably. However, once established in a particular location, they will reliably return soon after picking (so long as sufficient care is taken to minimise destruction to the undergrowth). This means that people who forage mushrooms usually keep a record of good mushrooms locations they have found, and often share these with other foragers. Unfortunately, this information economy suffers from a lack of connectedness – mushroom foragers being notably reclusive and poor communicators. This app exists to solve this problem. It allows mushroom foragers to list and search for locations where mushrooms can be found. Users can then indicate their intention to pick mushrooms in this location, at a certain time, thus ensuring that no other foragers will interrupt their solitary enterprise. They also have an option to leave a tip, to show their appreciation (or a comment to provide further information on their foraging experience). Several imbricated problems are solved: hunger, disinclination to see or speak to other humans, and the desire for the pleasures of a good 'shroom haul.  
 
 ## R8	Why is it a problem that needs solving?
 
-As younger generations come of age in an era of climate catastrophe, more and more members of the Gen Z and millennial cohorts are turning to the earth for answers to their own wellbeing – and the health of the planet. Their burgeoning mushroom madness just might be the quintessential sign of the times.
+As younger generations come of age in an era of climate catastrophe, more and more members of the Gen Z and millennial cohorts are turning to the earth for answers to their own wellbeing – and the health of the planet. Environmental stewardship is infused with the language of anti-capitalist activism and an emphasis on living more reciprocally with nature amid an economy of extraction. The study of fungi is fundamentally about the joy of mastery, of learning the taxonomies and ecology of a notoriously complex family of organisms. The stakes are thrillingly high: anything less than absolute certainty in one’s identification of a wild edible mushroom species can land its eater in the hospital – or, in some circumstances, the grave Endlessly complex, mushrooms unlock a portal of exciting possibility – a future that utilizes regenerative, fungus-derived plastics and Styrofoam-like packing materials, and that even taps into mycelial networks to graft artificial organs. The growing discipline of mycoremediation has opened new windows for harnessing mycelia to filter environmental pollutants and, help “clean up the messes humans have made”. Further, mental and physical benefits are promoted by, for example, mycologist Paul Stamets who declared on a lengthy 2017 episode of The Joe Rogan Experience that “psilocybin should be looked upon as a nootropic vitamin” (Korducki 2019)
 
-Environmental stewardship was a recurrent theme of conversation throughout, which was infused with the language of anti-capitalist activism and an emphasis on living more reciprocally with nature amid an economy of extraction.
-
-Therein lies the appeal. The study of fungi is fundamentally about the joy of mastery, of learning the taxonomies and ecology of a notoriously complex family of organisms. The stakes are thrillingly high: anything less than absolute certainty in one’s identification of a wild edible mushroom species can land its eater in the hospital – or, in some circumstances, the grave.
-
-Endlessly complex, mushrooms unlock a portal of exciting possibility – a future that utilizes regenerative, fungus-derived plastics and Styrofoam-like packing materials, and that even taps into mycelial networks to graft artificial organs. The growing discipline of mycoremediation has opened new windows for harnessing mycelia to filter environmental pollutants and, as Tzogas puts it, help “clean up the messes humans have made”.
-
-The podcaster Joe Rogan, a vocal advocate of psilocybin use and legalization, beat Pollan to the chase with a lengthy 2017 episode of The Joe Rogan Experience in which the mycologist Paul Stamets declared his belief that “psilocybin should be looked upon as a nootropic vitamin”.
-
-
+Reconnecting a politics of commitment and of ethical obligation with an ontology of more than human worlds without falling back into classic humanist categories of thought requires a speculative effort. It specifically poses the question of the compatibility of distributed agency and decentering the human subject with situated ethical obligations and commitments. That this is a tricky problem is well stated in how Lucy Suchman reminds us that when engaging with technoscientific assemblages “the price in recognizing the agency of artefacts need not be the denial of our own” (Suchman 2007b, 285). In this direction, the discussion of care in this app ultimately relates to how we conceive of a critical or, political, ethos in posthumanist thinking, of an “insurgent posthumanism” (Papadopoulos 2010). Indeed, the reclamation of care in approaches to more than human worlds marked by technoscience is a political project that defies the traditional ethical boundaries that have marked critical thinking. Following the trope of care into an “unexpected country” (Haraway 2011) of blurred boundaries – moral as much as material – requires opening up its possible meanings (Puig de la Bellacasa 2017).
 
 ## R9	A link (URL) to your deployed app (i.e. website)
 
+https://aqueous-sea-29087.herokuapp.com/
+
 ## R10	A link to your GitHub repository (repo).
 
+https://github.com/alisay/mush
 
 ## R11	Description of your marketplace app (website), including:
 ### Purpose
+
 To allow the sharing of information about locations where mushrooms may be foraged. 
 
 ### - Functionality / features
 
-Users: are able to create an account, log in, add information to their user accounts, create listings, add information and images to listings, and make bookings. Users must be logged in to access listings to foster a community vibe. 
-
-Mushrooms: users can create mushroom listings, modify the information in the listings 
+Users: are able to create an account, log in, add information to their user accounts, create listings, add information and images to their own listings, make bookings, and leave a tip on others' listings. Users must be logged in to access listings to foster a community vibe.
 
 ### Sitemap
+
+<img src="resources/site-map.png" />
+
 ### Screenshots
 ### Target audience
 
@@ -75,6 +48,8 @@ Environmentally and socially conscious mycologists living in cool, moist environ
 * DevOps: Git, Github, VS Code, Bundler, Lucidchart.
 
 ## R12	User stories for your app
+
+**User stories are well thought out, relevant, and comprehensively cover the needs of the app 6 points**
 
 * As a person interested in mushroom locating apps, I want to create an account using my email address and a chosen password, so that I can access the app.
 * As a registered user, I want to be able to define my name on the app, so that I may appear unique.
@@ -93,12 +68,13 @@ Environmentally and socially conscious mycologists living in cool, moist environ
 
 ## R13	Wireframes for your app
 
-More than five detailed and well designed wireframes provided, for several different screen sizes (as required for the app) 6 points
+**More than five detailed and well designed wireframes provided, for several different screen sizes (as required for the app) 6 points**
 
 | | Mobile | Web/Tablet |
 |:---:|:---:|:---:|
 |Home Page| <img src="resources/wireframe_home_mobile.png" />|<img src="resources/wireframe_home_web.png" />|
 |Browse Mushrooms|<img src="resources/wireframe_browse_mobile.png" />|<img src="resources/wireframe_browse_web.png" />|
+|Register | <img src="resources/wireframe_register_mobile.png" />|<img src="resources/wireframe_register_web.png" />|
 |Menu | <img src="resources/wireframe_menu_mobile.png" />||
 
 
@@ -108,6 +84,11 @@ More than five detailed and well designed wireframes provided, for several diffe
 
 <img src="resources/erd.png" />
 
+### Final ERD:
+
+### An explanation of discrepancies:
+
+
 ERD provided represents a normalised database model
 Meets D with no duplication and ideal definition of entities.
 ERD is complete with appropriately defined entities (models each serve a single purpose and appropriate fields). 6 points
@@ -116,11 +97,11 @@ ERD is complete with appropriately defined entities (models each serve a single 
 
 Precisely explains and shows understanding of the different high-level components of the app 6 points
 
+
+
 ## R16	Detail any third party services that your app will use
 
 Includes a complete and detailed description of third party services used in the app 6 points
-
-
 
 ## R17	Describe your projects models in terms of the relationships (active record associations) they have with each other
 
@@ -136,9 +117,11 @@ Flawless, complex, complete, and well thought through ERDs provided 6 points
 
 ## R20	Describe the way tasks are allocated and tracked in your project
 
-Shows significant planning for how tasks are planned and tracked, including a full description of the process and of the tools used 6 points
+I planned and tracked tasts in my project using aspects of the literate programming paradigm, as first advocated by Donald Knuth. This encourages programmers to structure their code as they would an essay – first writing out the program logic in human language and then annotating this with the code to execute the logic described. I was not able to implement the full scope of literate programming due to the fact that a great deal of the rails app structure is dictated by convention. However, I was able to implement it to the extent that I planned and tracked tasks to be completed through adding comments to my code in the locations where I understood additional work to be required. For example, I knew that one of the user stories described reserving the right to pick mushrooms of a certain listing and that this would require modification to the mushroom form. I therefore created a multi-line comment at an early stage of development to indicate the logic this would follow:
 
-comments/literate programming
+<img src="resources/tracking.png"/>
+
+This planning stage was tracked through a daily initial scan of the code committed the evening before, and a decision as to which task to focus on for that day. This method of planning and tracking also had the advantage in resulting in comprehensively commented code, as well as the source of truth for the project management process being stored in git alongside the source code and executable files. For further detail, and to see the process in full, please review my git commit history. 
 
 Total: 60 points
 
