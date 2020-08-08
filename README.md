@@ -34,6 +34,9 @@ Users: are able to create an account, log in, add information to their user acco
 <img src="resources/site-map.png" />
 
 ### Screenshots
+
+#TODO last
+
 ### Target audience
 
 Environmentally and socially conscious mycologists living in cool, moist environments. 
@@ -80,32 +83,58 @@ Environmentally and socially conscious mycologists living in cool, moist environ
 
 ## R14	An ERD for your app
 
-### Planned ERD: 
-
-<img src="resources/erd.png" />
-
 ### Final ERD:
 
-### An explanation of discrepancies:
-
-
-ERD provided represents a normalised database model
+**ERD provided represents a normalised database model 6 points**
 Meets D with no duplication and ideal definition of entities.
-ERD is complete with appropriately defined entities (models each serve a single purpose and appropriate fields). 6 points
+ERD is complete with appropriately defined entities (models each serve a single purpose and appropriate fields). 
+
+#TODO with dbdesigner
 
 ## R15	Explain the different high-level components (abstractions) in your app
 
-Precisely explains and shows understanding of the different high-level components of the app 6 points
+**Precisely explains and shows understanding of the different high-level components of the app 6 points**
 
-
+#TODO
 
 ## R16	Detail any third party services that your app will use
 
-Includes a complete and detailed description of third party services used in the app 6 points
+**Includes a complete and detailed description of third party services used in the app 6 points**
+
+* Amazon S3
+
+Amazon Simple Storage Service is a cloud-based object storage service. This app uses it in conjunction with Active Storage to allow users to upload and save images to their listings. 
+
+* Bootstrap-sass
+
+Bootstrap-sass is a Sass-powered version of Bootstrap 3. It is a free and open source framework directed at responsive, mobile-first, front-end web development, through providing design templates for interface components like forms, buttons and navigation. In this app, it is used to make the user interface less cluttered and more navigable. 
+
+* Devise
+
+Devise is a cookie/session-based authentication solution for Rails. Authentication is the process of verifying whether someone or something is who or what it declares itself to be. This app uses devise authenticatable to hash and store a password in the database to validate the authenticity of a user while signed in.
+
+* Heroku
+
+Heroku is a platform as a service (PaaS) that enables developers to build, run, and operate applications entirely in the cloud. This app is deployed on heroku. 
+
+* Stripe
+
+Stripe is an online payment processing infrastructure. In this app, it allows users to leave a tip, redirecting them to a payment gateway and sending back API endpoints when payment is confirmed. 
+
+* Google Maps
+
+* Geocoder
+
 
 ## R17	Describe your projects models in terms of the relationships (active record associations) they have with each other
 
-Complete discussion of the project’s models with an understanding of how its active record associations function 6 points
+**Complete discussion of the project’s models with an understanding of how its active record associations function 6 points**
+
+Rails supports six types of associations: belongs_to; has_one; has_many; has_many :through; has_one :through; has_and_belongs_to_many
+
+In this app:  
+A buyer belongs_to :profile, has_many :mushrooms, has_and_belongs_to_many :sellers
+
 
 ## R18	Discuss the database relations to be implemented in your application
 
@@ -113,7 +142,16 @@ Provides coherent discussion of the database relations, with reference to the ER
 
 ## R19	Provide your database schema design
 
-Flawless, complex, complete, and well thought through ERDs provided 6 points
+**Flawless, complex, complete, and well thought through ERDs provided 6 points**
+
+### Planned ERD: 
+
+<img src="resources/erd.png" />
+
+### Explanation of discrepancies with final ERD:
+
+Active storage
+
 
 ## R20	Describe the way tasks are allocated and tracked in your project
 
@@ -124,7 +162,6 @@ I planned and tracked tasts in my project using aspects of the literate programm
 This planning stage was tracked through a daily initial scan of the code committed the evening before, and a decision as to which task to focus on for that day. This method of planning and tracking also had the advantage in resulting in comprehensively commented code, as well as the source of truth for the project management process being stored in git alongside the source code and executable files. For further detail, and to see the process in full, please review my git commit history. 
 
 Total: 60 points
-
 
 Also: (48 points)
 Model implementation represents a normalised database model
