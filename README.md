@@ -99,7 +99,7 @@ ERD is complete with appropriately defined entities (models each serve a single 
 
 ### Explanation of discrepancies with final ERD:
 
-Active storage
+The initial designed ERD represents the minimum viable product for this app. It allow for users to sign up, list mushrooms and reserve or "purchase" them. The final ERD includes several additional models which are intended to allow for the stretch goals of this app: geolocating the mushroom picking locations and reserving the location for a specific time and date. In addition, the final ERD shows the additional models created by ActiveStorage. Rails active_storage:install creates two tables: active_storage_blobs and active_storage_attachment. The first table carries the picture file itself and metadata, while the second links the blob to the model and record to which it is attached. This is an example of a polymorphic association, because the blob can be linked to multiple models.  
 
 ## R15	Explain the different high-level components (abstractions) in your app
 
