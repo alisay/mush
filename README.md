@@ -25,9 +25,9 @@ https://github.com/alisay/mush
 
 To allow the sharing of information about locations where mushrooms may be foraged. 
 
-### - Functionality / features
+### Functionality / features
 
-Users: are able to create an account, log in, add information to their user accounts, create listings, add information and images to their own listings, make bookings, and leave a tip on others' listings. Users must be logged in to access listings to foster a community vibe.
+Users are able to create an account, log in, add information to their user accounts, create listings, add information and images to their own listings, make bookings, and leave a tip on others' listings. Users must be logged in to access listings so as to foster a community vibe.
 
 ### Sitemap
 
