@@ -105,7 +105,13 @@ Active storage
 
 **Precisely explains and shows understanding of the different high-level components of the app 6 points**
 
-#TODO
+Some of the high-level components in the app are: 
+
+Mushroom meadows: this is a location where mushrooms grow. It is geolocated to a specific set of coordinates, and can provide additional information like the kind of mushroom that has been spotted there, and some images of the location and mushrooms. Users who are registered to use the site can either act as a "seller" by listing these locations on the app, or "buyer" by claiming the location for a specific date and time. 
+
+Users: In order to use the site, someone must register as a user. This allows them to create a profile, attached to their email address and password. Unregistered users can still browse the mushrooms listing page and search results, but cannot view the details of individual listings. 
+
+Map: the map view allows users to see a visual representation of the mushroom locations near to them. They can also calculate the time needed to travel to those locations, and from this make a decision about which listing to reserve. 
 
 ## R16	Detail any third party services that your app will use
 
@@ -131,11 +137,6 @@ Heroku is a platform as a service (PaaS) that enables developers to build, run, 
 
 Stripe is an online payment processing infrastructure. In this app, it allows users to leave a tip, redirecting them to a payment gateway and sending back API endpoints when payment is confirmed. 
 
-* Google Maps
-
-* Geocoder
-
-
 ## R17	Describe your projects models in terms of the relationships (active record associations) they have with each other
 
 **Complete discussion of the project’s models with an understanding of how its active record associations function 6 points**
@@ -153,7 +154,7 @@ by declaring that profile belongs to user, buyer and seller belong to profile an
 
 ## R18	Discuss the database relations to be implemented in your application
 
-Provides coherent discussion of the database relations, with reference to the ERD 6 points
+**Provides coherent discussion of the database relations, with reference to the ERD 6 points**
 
 As can be seen in the planned ERD provided, there are five database tables, namely: users, profiles, buyers, sellers, and mushrooms, and a join table for buyers and sellers. The profile table has a row establishing a one to one relationship with the users table using a foreign key. Both buyers and sellers have a one to one relationship with the profile table, this being established through a foreign key in these tables referring to the profile ID primary key. Meanwhile, buyers and sellers have a many-to-many relationship through the buyers-sellers join table. Finally, the mushroom table has two rows referring to the foreign keys of buyer ID and seller ID. Both these relationships are one to many; that is, a buyer and seller have zero or many mushrooms, while a mushroom has one and only one buyer or seller. 
 
