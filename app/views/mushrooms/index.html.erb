@@ -17,6 +17,7 @@
         <td><%= mushroom.flavour %></td>
         <td><%= mushroom.seller_id %></td>
         <td><%= link_to 'Show', mushroom %></td>
+        <%#Only the seller can edit or delete the listing#%>
         <% if(current_user && current_user.profile && (current_user.profile.id == mushroom.seller.profile_id)) %>
           <td><%= link_to 'Edit', edit_mushroom_path(mushroom) %></td>
           <td><%= link_to 'Destroy', mushroom, method: :delete, data: { confirm: 'Are you sure?' } %></td>

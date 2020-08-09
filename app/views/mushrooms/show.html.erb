@@ -23,13 +23,11 @@
 </p>
 </div>
 
-
+<%#Only the seller can edit or delete the listing#%>
 <% if(current_user && current_user.profile && (current_user.profile.id == @mushroom.seller.profile_id)) %>
     <%= link_to 'Edit', edit_mushroom_path(@mushroom) %> |
 <% end %>
-<% if(@mushroom.purchased == false) %>
-  <p><%= link_to 'Mark as sold', mushroom_path(@mushroom, mushroom: {purchased: true} ), method: :put %></p>
-<% end %> 
+  <p><%= link_to 'Mark as sold', mushroom_path(@mushroom, mushroom: {buyer_id: current_user.profile.id} ), method: :put %></p>
 <p><%= link_to 'Back', mushrooms_path %></p>
 
 <p><button data-stripe="payment">Leave a tip<%= number_to_currency(5) %></button></p>
