@@ -23,10 +23,11 @@
 </p>
 </div>
 
-
+<%# If the logged in user is the person who listed the mushroom for sale, allow them to edit the details #%>
 <% if(current_user && current_user.profile && (current_user.profile.id == @mushroom.seller.profile_id)) %>
     <%= link_to 'Edit', edit_mushroom_path(@mushroom) %> |
 <% end %>
+<%# If the mushroom has not been purchased, allow it to be sold #%>
 <% if(@mushroom.purchased == false) %>
   <p><%= link_to 'Mark as sold', mushroom_path(@mushroom, mushroom: {purchased: true} ), method: :put %></p>
 <% end %> 
