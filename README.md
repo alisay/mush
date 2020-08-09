@@ -83,6 +83,12 @@ Environmentally and socially conscious mycologists living in cool, moist environ
 
 ## R14	An ERD for your app
 
+**Flawless, complex, complete, and well thought through ERDs provided 6 points**
+
+### Planned ERD: 
+
+<img src="resources/erd.png" />
+
 ### Final ERD:
 
 **ERD provided represents a normalised database model 6 points**
@@ -90,6 +96,10 @@ Meets D with no duplication and ideal definition of entities.
 ERD is complete with appropriately defined entities (models each serve a single purpose and appropriate fields). 
 
 #TODO with dbdesigner
+
+### Explanation of discrepancies with final ERD:
+
+Active storage
 
 ## R15	Explain the different high-level components (abstractions) in your app
 
@@ -139,23 +149,78 @@ In this app, it is planned that:
 * A buyer belongs_to :profile, has_many :mushrooms, has_and_belongs_to_many :sellers
 * A mushroom listing belongs_to :seller, has_many_attached :pictures
 
+by declaring that profile belongs to user, buyer and seller belong to profile and mushroom belongs to seller, this app instructs Rails to maintain Primary Key-Foreign Key information between instances of the two models. The has_one association between user and profile, and profile and seller also set up a one-to-one connection with another model, indicating that each instance of the model contains or possesses one instance of the other model. A has_many association indicates a one-to-many connection with another model. The seller and buyer models have a has_and_belongs_to_many association. This means they have a direct many-to-many connection with each other, with no intervening model. This app is not designed to make use of the has_many or has_one :through associations. 
 
 ## R18	Discuss the database relations to be implemented in your application
 
 Provides coherent discussion of the database relations, with reference to the ERD 6 points
 
+As can be seen in the planned ERD provided, there are five database tables, namely: users, profiles, buyers, sellers, and mushrooms, and a join table for buyers and sellers. The profile table has a row establishing a one to one relationship with the users table using a foreign key. Both buyers and sellers have a one to one relationship with the profile table, this being established through a foreign key in these tables referring to the profile ID primary key. Meanwhile, buyers and sellers have a many-to-many relationship through the buyers-sellers join table. Finally, the mushroom table has two rows referring to the foreign keys of buyer ID and seller ID. Both these relationships are one to many; that is, a buyer and seller have zero or many mushrooms, while a mushroom has one and only one buyer or seller. 
+
 ## R19	Provide your database schema design
+```ruby
+  create_table "buyers", force: :cascade do |t|
+    t.bigint "profile_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["profile_id"], name: "index_buyers_on_profile_id"
+  end
 
-**Flawless, complex, complete, and well thought through ERDs provided 6 points**
+  create_table "buyers_sellers", force: :cascade do |t|
+    t.bigint "buyer_id", null: false
+    t.bigint "seller_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["buyer_id"], name: "index_buyers_sellers_on_buyer_id"
+    t.index ["seller_id"], name: "index_buyers_sellers_on_seller_id"
+  end
 
-### Planned ERD: 
+  create_table "mushrooms", force: :cascade do |t|
+    t.string "flavour"
+    t.bigint "seller_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.bigint "buyer_id"
+    t.boolean "purchased", default: false
+    t.index ["buyer_id"], name: "index_mushrooms_on_buyer_id"
+    t.index ["seller_id"], name: "index_mushrooms_on_seller_id"
+  end
 
-<img src="resources/erd.png" />
+  create_table "profiles", force: :cascade do |t|
+    t.string "name"
+    t.bigint "user_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["user_id"], name: "index_profiles_on_user_id"
+  end
 
-### Explanation of discrepancies with final ERD:
+  create_table "sellers", force: :cascade do |t|
+    t.bigint "profile_id", null: false
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["profile_id"], name: "index_sellers_on_profile_id"
+  end
 
-Active storage
-
+  create_table "users", force: :cascade do |t|
+    t.string "email", default: "", null: false
+    t.string "encrypted_password", default: "", null: false
+    t.string "reset_password_token"
+    t.datetime "reset_password_sent_at"
+    t.datetime "remember_created_at"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+    t.index ["email"], name: "index_users_on_email", unique: true
+    t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
+  end
+  
+  add_foreign_key "buyers", "profiles"
+  add_foreign_key "buyers_sellers", "buyers"
+  add_foreign_key "buyers_sellers", "sellers"
+  add_foreign_key "mushrooms", "buyers"
+  add_foreign_key "mushrooms", "sellers"
+  add_foreign_key "profiles", "users"
+  add_foreign_key "sellers", "profiles"
+```
 
 ## R20	Describe the way tasks are allocated and tracked in your project
 
