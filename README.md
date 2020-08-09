@@ -132,8 +132,12 @@ Stripe is an online payment processing infrastructure. In this app, it allows us
 
 Rails supports six types of associations: belongs_to; has_one; has_many; has_many :through; has_one :through; has_and_belongs_to_many
 
-In this app:  
-A buyer belongs_to :profile, has_many :mushrooms, has_and_belongs_to_many :sellers
+In this app, it is planned that:  
+* A user has_one :profile
+* A profile belongs_to :user, has_one :seller
+* A seller belongs_to :profile, has_many :mushrooms, has_and_belongs_to_many :buyers
+* A buyer belongs_to :profile, has_many :mushrooms, has_and_belongs_to_many :sellers
+* A mushroom listing belongs_to :seller, has_many_attached :pictures
 
 
 ## R18	Discuss the database relations to be implemented in your application
