@@ -138,6 +138,10 @@ Heroku is a platform as a service (PaaS) that enables developers to build, run, 
 
 Stripe is an online payment processing infrastructure. In this app, it allows users to leave a tip, redirecting them to a payment gateway and sending back API endpoints when payment is confirmed. 
 
+* Geocoder
+
+Geocoder is a gem which takes an address and searches for its coordinates. It can also do the reverse, given latitude and longitude. It is used in this app to allow users to indicate the location of a mushroom foraging spot. 
+
 ## R17	Describe your projects models in terms of the relationships (active record associations) they have with each other
 
 **Complete discussion of the project’s models with an understanding of how its active record associations function 6 points**
