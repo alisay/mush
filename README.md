@@ -41,21 +41,6 @@ Users are able to create an account, log in, add information to their user accou
 |<img src="resources/IMG_0944.jpeg" />|<img src="resources/screenie-3.png" />|
 |<img src="resources/IMG_0946.jpeg" />|<img src="resources/screenie-4.png" />|
 
-#### Wob
-
-
-
-
-
-
-
-
-
-<img src="resources/IMG_0947.jpeg" />
-
-
-#### Mobile
-
 ### Target audience
 
 Environmentally and socially conscious mycologists living in cool, moist environments. 
