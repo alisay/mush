@@ -2,7 +2,7 @@
 
     <% @results.each do |result| %>  
         <tr>
-            <td><%= result.flavour %></td>
+            <td><%= result.flavour.name %></td>
             <td><%= link_to 'Show', result %></td><br>
         </tr>
     <% end %>
