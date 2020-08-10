@@ -1,7 +1,8 @@
 class MushroomsController < ApplicationController
   before_action :set_mushroom, only: [:show, :edit, :update, :destroy, :buy]
+  before_action :set_flavours, only: [:new, :edit]
   before_action :authenticate_user!
-  
+
   # GET /mushrooms
   # GET /mushrooms.json
   def index
@@ -55,6 +56,7 @@ class MushroomsController < ApplicationController
   # POST /mushrooms
   # POST /mushrooms.json
   def create
+    pp @flavours
     @mushroom = Mushroom.new(mushroom_params)
     @seller = Seller.new
     @seller.profile_id = current_user.profile.id
@@ -120,8 +122,13 @@ class MushroomsController < ApplicationController
       @mushroom = Mushroom.find(params[:id])
     end
 
+    def set_flavours
+      @flavours = Flavour.all
+    end
+
+
     # Only allow a list of trusted parameters through.
     def mushroom_params
-      params.require(:mushroom).permit(:flavour, :seller_id, :buyer_id, :purchased, pictures: [])
+      params.require(:mushroom).permit(:flavour_id, :seller_id, :buyer_id, :purchased, pictures: [])
     end
 end

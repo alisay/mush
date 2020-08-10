@@ -12,8 +12,8 @@
   <% end %>
 
   <div class="field">
-    <%= form.label :flavour %>
-    <%= form.text_field :flavour %>
+    <%= form.label :flavour_id %>
+    <%= form.collection_select :flavour_id, @flavours, :id, :name %>
   </div>
 
   <div class="field">

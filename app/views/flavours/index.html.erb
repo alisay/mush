@@ -1,0 +1,27 @@
+<p id="notice"><%= notice %></p>
+
+<h1>Flavours</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @flavours.each do |flavour| %>
+      <tr>
+        <td><%= flavour.name %></td>
+        <td><%= link_to 'Show', flavour %></td>
+        <td><%= link_to 'Edit', edit_flavour_path(flavour) %></td>
+        <td><%= link_to 'Destroy', flavour, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Flavour', new_flavour_path %>

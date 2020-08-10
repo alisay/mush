@@ -14,7 +14,7 @@
   <tbody>
     <% @mushrooms.each do |mushroom| %>
       <tr>
-        <td><%= mushroom.flavour %></td>
+        <td><%= mushroom.flavour.name %></td>
         <td><%= mushroom.seller_id %></td>
         <td><%= link_to 'Show', mushroom %></td>
         <%#Only the seller can edit or delete the listing#%>

@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  resources :flavours
   resources :mushrooms
   resources :sellers
   resources :profiles

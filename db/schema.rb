@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_04_034735) do
+ActiveRecord::Schema.define(version: 2020_08_10_014218) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -52,14 +52,21 @@ ActiveRecord::Schema.define(version: 2020_08_04_034735) do
     t.index ["seller_id"], name: "index_buyers_sellers_on_seller_id"
   end
 
+  create_table "flavours", force: :cascade do |t|
+    t.string "name"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
+
   create_table "mushrooms", force: :cascade do |t|
-    t.string "flavour"
     t.bigint "seller_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
     t.bigint "buyer_id"
     t.boolean "purchased", default: false
+    t.bigint "flavour_id", null: false
     t.index ["buyer_id"], name: "index_mushrooms_on_buyer_id"
+    t.index ["flavour_id"], name: "index_mushrooms_on_flavour_id"
     t.index ["seller_id"], name: "index_mushrooms_on_seller_id"
   end
 
@@ -95,6 +102,7 @@ ActiveRecord::Schema.define(version: 2020_08_04_034735) do
   add_foreign_key "buyers_sellers", "buyers"
   add_foreign_key "buyers_sellers", "sellers"
   add_foreign_key "mushrooms", "buyers"
+  add_foreign_key "mushrooms", "flavours"
   add_foreign_key "mushrooms", "sellers"
   add_foreign_key "profiles", "users"
   add_foreign_key "sellers", "profiles"
