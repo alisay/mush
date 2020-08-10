@@ -60,3 +60,4 @@ gem "aws-sdk-s3"
 
 gem "stripe", "~> 5.22"
 gem 'bootstrap-sass', '~> 3.3.6'  
+gem 'geocoder'

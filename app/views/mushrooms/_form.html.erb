@@ -17,6 +17,26 @@
   </div>
 
   <div class="field">
+    <%= form.label :additional_comments %>
+    <%= form.text_area :additional_comments %>
+  </div>  
+
+  <div class="field">
+    <%= form.label :latitude %>
+    <%= form.text_field :latitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :longitude %>
+    <%= form.text_field :longitude %>
+  </div>
+
+  <div class="field">
+    <%= form.label :address %>
+    <%= form.text_field :address %>
+  </div>
+
+  <div class="field">
     <%= form.label :pictures %>
     <%= form.file_field :pictures, multiple: true %>
   </div>

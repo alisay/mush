@@ -123,6 +123,6 @@ class MushroomsController < ApplicationController
 
     # Only allow a list of trusted parameters through.
     def mushroom_params
-      params.require(:mushroom).permit(:flavour_id, :seller_id, :buyer_id, :purchased, pictures: [])
+      params.require(:mushroom).permit(:flavour_id, :seller_id, :buyer_id, :purchased, :latitude, :longitude, :address, :additional_comments, pictures: [])
     end
 end
