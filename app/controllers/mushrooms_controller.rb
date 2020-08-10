@@ -100,10 +100,17 @@ class MushroomsController < ApplicationController
   end
 
   def buy 
-    @buyer = Buyer.new
-    @buyer.profile_id = current_user.profile.id
-    @buyer.save
-    @mushroom.buyer_id = current_user.profile.buyer.id
+    @mushroom.buyer_id = current_user.id
+    @mushroom.purchased = true
+    respond_to do |format|
+      if @mushroom.save
+        format.html { redirect_to @mushroom, notice: 'Mushroom is yours.' }
+        format.json { render :show, status: :created, location: @mushroom }
+      else
+        format.html { render :new }
+        format.json { render json: @mushroom.errors, status: :unprocessable_entity }
+      end
+    end
   end
 
 
