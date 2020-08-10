@@ -1,5 +1,5 @@
 class MushroomsController < ApplicationController
-  before_action :set_mushroom, only: [:show, :edit, :update, :destroy]
+  before_action :set_mushroom, only: [:show, :edit, :update, :destroy, :buy]
   before_action :authenticate_user!
   
   # GET /mushrooms
@@ -75,9 +75,9 @@ class MushroomsController < ApplicationController
   # PATCH/PUT /mushrooms/1
   # PATCH/PUT /mushrooms/1.json
   def update
-    # if @mushroom.pictures
-    #   @mushroom.pictures.purge
-    # end
+    if @mushroom.pictures
+      @mushroom.pictures.purge
+    end
     respond_to do |format|
       if @mushroom.update(mushroom_params)
         format.html { redirect_to @mushroom, notice: 'Mushroom was successfully updated.' }
@@ -98,6 +98,14 @@ class MushroomsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
+  def buy 
+    @buyer = Buyer.new
+    @buyer.profile_id = current_user.profile.id
+    @buyer.save
+    @mushroom.buyer_id = current_user.profile.buyer.id
+  end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.

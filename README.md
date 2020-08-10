@@ -92,6 +92,7 @@ Environmentally and socially conscious mycologists living in cool, moist environ
 ### Final ERD:
 
 **ERD provided represents a normalised database model 6 points**
+
 Meets D with no duplication and ideal definition of entities.
 ERD is complete with appropriately defined entities (models each serve a single purpose and appropriate fields). 
 
@@ -159,6 +160,8 @@ by declaring that profile belongs to user, buyer and seller belong to profile an
 As can be seen in the planned ERD provided, there are five database tables, namely: users, profiles, buyers, sellers, and mushrooms, and a join table for buyers and sellers. The profile table has a row establishing a one to one relationship with the users table using a foreign key. Both buyers and sellers have a one to one relationship with the profile table, this being established through a foreign key in these tables referring to the profile ID primary key. Meanwhile, buyers and sellers have a many-to-many relationship through the buyers-sellers join table. Finally, the mushroom table has two rows referring to the foreign keys of buyer ID and seller ID. Both these relationships are one to many; that is, a buyer and seller have zero or many mushrooms, while a mushroom has one and only one buyer or seller. 
 
 ## R19	Provide your database schema design
+**Database design appropriately addresses the requirements of a complex scenario 6 points**
+
 ```ruby
   create_table "buyers", force: :cascade do |t|
     t.bigint "profile_id", null: false
@@ -225,20 +228,21 @@ As can be seen in the planned ERD provided, there are five database tables, name
 
 ## R20	Describe the way tasks are allocated and tracked in your project
 
+**Shows significant planning for how tasks are planned and tracked, including a full description of the process and of the tools used 6 points**
+
 I planned and tracked tasts in my project using aspects of the literate programming paradigm, as first advocated by Donald Knuth. This encourages programmers to structure their code as they would an essay – first writing out the program logic in human language and then annotating this with the code to execute the logic described. I was not able to implement the full scope of literate programming due to the fact that a great deal of the rails app structure is dictated by convention. However, I was able to implement it to the extent that I planned and tracked tasks to be completed through adding comments to my code in the locations where I understood additional work to be required. For example, I knew that one of the user stories described reserving the right to pick mushrooms of a certain listing and that this would require modification to the mushroom form. I therefore created a multi-line comment at an early stage of development to indicate the logic this would follow:
 
 <img src="resources/tracking.png"/>
 
 This planning stage was tracked through a daily initial scan of the code committed the evening before, and a decision as to which task to focus on for that day. This method of planning and tracking also had the advantage in resulting in comprehensively commented code, as well as the source of truth for the project management process being stored in git alongside the source code and executable files. For further detail, and to see the process in full, please review my git commit history. 
 
-Total: 60 points
+Total: 66 points
 
-Also: (48 points)
-Model implementation represents a normalised database model
-Database design appropriately addresses the requirements of a complex scenario
-Implemented controllers demonstrate correct use of commands to query the database infrastructure
-Queries implemented provide correct data for the given scenario
-Code comments demonstrate how the queries implemented correctly represent the database structure
-Identify and use appropriate model methods
-Minimising database calls needed to perform an action and implement eager loading where appropriate
-Sanitise and validates input to maintain data integrity
+Also: (42 points)
+* Model implementation represents a normalised database model
+* Implemented controllers demonstrate correct use of commands to query the database infrastructure
+* Queries implemented provide correct data for the given scenario
+* Code comments demonstrate how the queries implemented correctly represent the database structure
+* Identify and use appropriate model methods
+* Minimising database calls needed to perform an action and implement eager loading where appropriate
+* Sanitise and validates input to maintain data integrity
