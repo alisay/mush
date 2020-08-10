@@ -84,6 +84,7 @@ Environmentally and socially conscious mycologists living in cool, moist environ
 ## R14	An ERD for your app
 
 **Flawless, complex, complete, and well thought through ERDs provided 6 points**
+**ERD provided represents a normalised database model 6 points**
 
 ### Planned ERD: 
 
@@ -93,16 +94,9 @@ Environmentally and socially conscious mycologists living in cool, moist environ
 
 <img src="resources/erd2.png" />
 
-**ERD provided represents a normalised database model 6 points**
-
-Meets D with no duplication and ideal definition of entities.
-ERD is complete with appropriately defined entities (models each serve a single purpose and appropriate fields). 
-
-#TODO with dbdesigner
-
 ### Explanation of discrepancies with final ERD:
 
-The initial designed ERD represents the minimum viable product for this app. It allow for users to sign up, list mushrooms and reserve or "purchase" them. The final ERD includes several additional models which are intended to allow for the stretch goals of this app: geolocating the mushroom picking locations and reserving the location for a specific time and date. In addition, the final ERD shows the additional models created by ActiveStorage. Rails active_storage:install creates two tables: active_storage_blobs and active_storage_attachment. The first table carries the picture file itself and metadata, while the second links the blob to the model and record to which it is attached. This is an example of a polymorphic association, because the blob can be linked to multiple models.  
+The initial ERD did not demonstrate a normalised database model because the buyer and seller table replicated the information of the profile table, without adding additional functionality. I determined this midway through the build, and adapted accordingly. The final ERD also has an additional table for 'flavours' which indicates the types/species of mushrooms that can be found in a location. These are not editable, but are seeded through the seed file. This avoids the possibility of users listing illegal or poisonous mushroom types, which might create legal liability for the app creator. 
 
 ## R15	Explain the different high-level components (abstractions) in your app
 
