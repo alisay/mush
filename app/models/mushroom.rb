@@ -4,4 +4,8 @@ class Mushroom < ApplicationRecord
   has_one :buyer, :class_name => 'Profile'
   belongs_to :seller, :class_name => 'Profile'
 
+  def self.search(search)  
+    where("lower(flavour.name) LIKE :search", search: "%#{search.downcase}%").uniq   
+  end
+ 
 end

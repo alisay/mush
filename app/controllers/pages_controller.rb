@@ -5,8 +5,12 @@ class PagesController < ApplicationController
             redirect_to(root_path, alert: "Please enter a search term") and return  
         else  
             @parameter = params[:search].downcase  
-            @results = Mushroom.all.where("lower(flavour) LIKE :search", search: "%#{@parameter}%")
+            @flavour = Flavour.where("lower(name) LIKE :search", search: "%#{@parameter}%")  
+            @results = Mushroom.all.where(flavour_id: @flavour)
         end  
     end
 
 end
+
+
+
