@@ -59,5 +59,5 @@ gem "devise", "~> 4.7"
 gem "aws-sdk-s3"
 
 gem "stripe", "~> 5.22"
-gem 'bootstrap-sass', '~> 3.3.6'  
+gem 'bootstrap-sass', '~> 3.4.1'  
 gem 'geocoder'
