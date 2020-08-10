@@ -16,9 +16,8 @@ class MushroomsController < ApplicationController
         payment_method_types: ['card'],
         customer_email: current_user.email,
         line_items: [{
-            name: @mushroom.flavour,
-            # amount: @mushroom.price * 100,
-            amount: 5000,
+            name: @mushroom.flavour.name,
+            amount: 500,
             currency: 'aud',
             quantity: 1,
         }],
