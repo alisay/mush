@@ -1,6 +1,6 @@
 class MushroomsController < ApplicationController
   before_action :set_mushroom, only: [:show, :edit, :update, :destroy, :buy]
-  before_action :set_flavours, only: [:new, :edit]
+  before_action :set_flavours
   before_action :authenticate_user!
 
   # GET /mushrooms
@@ -51,17 +51,14 @@ class MushroomsController < ApplicationController
 
   # GET /mushrooms/1/edit
   def edit
+    pp @mushroom
   end
 
   # POST /mushrooms
   # POST /mushrooms.json
   def create
-    pp @flavours
     @mushroom = Mushroom.new(mushroom_params)
-    @seller = Seller.new
-    @seller.profile_id = current_user.profile.id
-    @seller.save
-    @mushroom.seller_id = current_user.profile.seller.id
+    @mushroom.seller_id = current_user.profile.id
     
     respond_to do |format|
       if @mushroom.save
@@ -77,9 +74,9 @@ class MushroomsController < ApplicationController
   # PATCH/PUT /mushrooms/1
   # PATCH/PUT /mushrooms/1.json
   def update
-    if @mushroom.pictures
-      @mushroom.pictures.purge
-    end
+    # if @mushroom.pictures
+    #   @mushroom.pictures.purge
+    # end
     respond_to do |format|
       if @mushroom.update(mushroom_params)
         format.html { redirect_to @mushroom, notice: 'Mushroom was successfully updated.' }
@@ -102,6 +99,7 @@ class MushroomsController < ApplicationController
   end
 
   def buy 
+    
     @mushroom.buyer_id = current_user.id
     @mushroom.purchased = true
     respond_to do |format|

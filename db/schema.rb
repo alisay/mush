@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2020_08_10_014218) do
+ActiveRecord::Schema.define(version: 2020_08_10_043055) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -36,22 +36,6 @@ ActiveRecord::Schema.define(version: 2020_08_10_014218) do
     t.index ["key"], name: "index_active_storage_blobs_on_key", unique: true
   end
 
-  create_table "buyers", force: :cascade do |t|
-    t.bigint "profile_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["profile_id"], name: "index_buyers_on_profile_id"
-  end
-
-  create_table "buyers_sellers", force: :cascade do |t|
-    t.bigint "buyer_id", null: false
-    t.bigint "seller_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["buyer_id"], name: "index_buyers_sellers_on_buyer_id"
-    t.index ["seller_id"], name: "index_buyers_sellers_on_seller_id"
-  end
-
   create_table "flavours", force: :cascade do |t|
     t.string "name"
     t.datetime "created_at", precision: 6, null: false
@@ -59,10 +43,10 @@ ActiveRecord::Schema.define(version: 2020_08_10_014218) do
   end
 
   create_table "mushrooms", force: :cascade do |t|
+    t.bigint "buyer_id"
     t.bigint "seller_id", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
-    t.bigint "buyer_id"
     t.boolean "purchased", default: false
     t.bigint "flavour_id", null: false
     t.index ["buyer_id"], name: "index_mushrooms_on_buyer_id"
@@ -78,13 +62,6 @@ ActiveRecord::Schema.define(version: 2020_08_10_014218) do
     t.index ["user_id"], name: "index_profiles_on_user_id"
   end
 
-  create_table "sellers", force: :cascade do |t|
-    t.bigint "profile_id", null: false
-    t.datetime "created_at", precision: 6, null: false
-    t.datetime "updated_at", precision: 6, null: false
-    t.index ["profile_id"], name: "index_sellers_on_profile_id"
-  end
-
   create_table "users", force: :cascade do |t|
     t.string "email", default: "", null: false
     t.string "encrypted_password", default: "", null: false
@@ -93,17 +70,15 @@ ActiveRecord::Schema.define(version: 2020_08_10_014218) do
     t.datetime "remember_created_at"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
+    t.string "confirmation_token"
+    t.datetime "confirmed_at"
+    t.datetime "confirmation_sent_at"
+    t.index ["confirmation_token"], name: "index_users_on_confirmation_token", unique: true
     t.index ["email"], name: "index_users_on_email", unique: true
     t.index ["reset_password_token"], name: "index_users_on_reset_password_token", unique: true
   end
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "buyers", "profiles"
-  add_foreign_key "buyers_sellers", "buyers"
-  add_foreign_key "buyers_sellers", "sellers"
-  add_foreign_key "mushrooms", "buyers"
   add_foreign_key "mushrooms", "flavours"
-  add_foreign_key "mushrooms", "sellers"
   add_foreign_key "profiles", "users"
-  add_foreign_key "sellers", "profiles"
 end
