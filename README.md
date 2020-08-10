@@ -91,6 +91,8 @@ Environmentally and socially conscious mycologists living in cool, moist environ
 
 ### Final ERD:
 
+<img src="resources/erd2.png" />
+
 **ERD provided represents a normalised database model 6 points**
 
 Meets D with no duplication and ideal definition of entities.
