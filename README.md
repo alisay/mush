@@ -34,8 +34,27 @@ Users are able to create an account, log in, add information to their user accou
 <img src="resources/site-map.png" />
 
 ### Screenshots
+| Mobile | Wob |
+|:---:|:---:|
+|<img src="resources/IMG_0942.jpeg" />|<img src="resources/screenie-1.png" />|
+|<img src="resources/IMG_0943.jpeg" />|<img src="resources/screenie-2.png" />|
+|<img src="resources/IMG_0944.jpeg" />|<img src="resources/screenie-3.png" />|
+|<img src="resources/IMG_0946.jpeg" />|<img src="resources/screenie-4.png" />|
 
-#TODO last
+#### Wob
+
+
+
+
+
+
+
+
+
+<img src="resources/IMG_0947.jpeg" />
+
+
+#### Mobile
 
 ### Target audience
 
@@ -73,7 +92,7 @@ Environmentally and socially conscious mycologists living in cool, moist environ
 
 **More than five detailed and well designed wireframes provided, for several different screen sizes (as required for the app) 6 points**
 
-| | Mobile | Web/Tablet |
+| | Mobile | Web |
 |:---:|:---:|:---:|
 |Home Page| <img src="resources/wireframe_home_mobile.png" />|<img src="resources/wireframe_home_web.png" />|
 |Browse Mushrooms|<img src="resources/wireframe_browse_mobile.png" />|<img src="resources/wireframe_browse_web.png" />|
